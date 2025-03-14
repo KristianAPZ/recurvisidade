@@ -6,15 +6,15 @@ def investimentoBitcoin(dinheiro, dolar, bitcoin, mes=0, valor_acumulado=0, mese
         meses_totais.append(1)
     if (valor_acumulado*dolar[mes]) >= 100000 and not valor_cem_mil:
         print(
-            f"Em {sum(meses_totais)} anos e {mes+1} meses com {valor_acumulado} dolares alcanza os cem mil reais")
+            f"Em {sum(meses_totais)} anos e {mes+1} meses com {valor_acumulado} dolares alcança os cem mil reais")
         valor_cem_mil = True
     if (valor_acumulado*dolar[mes]) >= bitcoin[mes] and not valor_um_bitcoin:
         print(
-            f"Em {sum(meses_totais)} anos e {mes+1} meses com {valor_acumulado} dolares alcanza um bitcoin")
+            f"Em {sum(meses_totais)} anos e {mes+1} meses com {valor_acumulado} dolares alcança um bitcoin")
         valor_um_bitcoin = True
     if (valor_acumulado*dolar[mes]) >= 1000000:
         print(
-            f"Em {sum(meses_totais)} anos e {mes+1} meses com {valor_acumulado} dolares alcanza o milhão de reais")
+            f"Em {sum(meses_totais)} anos e {mes+1} meses com {valor_acumulado} dolares alcança o milhão de reais")
         return
     taxa = 1.05
 
