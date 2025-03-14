@@ -1,4 +1,4 @@
-def investimento(dinheiro, dolar, bitcoin, mes=0, valor_acumulado=0, meses_totais=None, valor_cem_mil=False, valor_um_bitcoin=False):
+def investimentoBitcoin(dinheiro, dolar, bitcoin, mes=0, valor_acumulado=0, meses_totais=None, valor_cem_mil=False, valor_um_bitcoin=False):
     if meses_totais is None:
         meses_totais = []
     if mes >= len(dolar):
@@ -19,8 +19,8 @@ def investimento(dinheiro, dolar, bitcoin, mes=0, valor_acumulado=0, meses_totai
     taxa = 1.05
 
     valor_acumulado = round(valor_acumulado*taxa + (dinheiro/dolar[mes]), 2)
-    investimento(dinheiro, dolar, bitcoin, mes+1, valor_acumulado,
-                 meses_totais, valor_cem_mil, valor_um_bitcoin)
+    investimentoBitcoin(dinheiro, dolar, bitcoin, mes+1, valor_acumulado,
+                        meses_totais, valor_cem_mil, valor_um_bitcoin)
 
 
 dinheiro = 250.00
@@ -29,4 +29,4 @@ dolar = [4.95, 4.98, 5, 5.17, 5.19, 5.55,
 bitcoin = [227000, 249625.87, 362034.66, 344548.67, 316822.65,
            357068.67, 356681.9, 336002.66, 322000, 351345.95, 532710.28, 652238.05]
 
-investimento(dinheiro, dolar, bitcoin)
+investimentoBitcoin(dinheiro, dolar, bitcoin)
